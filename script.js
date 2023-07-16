@@ -1,4 +1,4 @@
-//Asides //
+// Asides //
 
 const textButton = document.getElementById("text-btn");
 const imgButton = document.getElementById("img-btn");
@@ -19,23 +19,8 @@ const hideImgAside = () => {
 textButton.addEventListener("click" , () => hideImgAside());
 imgButton.addEventListener("click" , () => hideTextAside());
 
-/*function hideTextAside() {
-    imgAside.classList.add("hidden");
-    textAside.classList.remove("hidden");
-}
 
-const hideImgAside = () => {
-    imgAside.classList.remove("hidden");
-    textAside.classList.add("hidden");
-}
-
-textButton.addEventListener("click" , () => hideImgAside());
-imgButton.addEventListener("click" , () => hideTextAside())*/
-
-///////////////////////////////////////////////////////////////////
-
-
-//Text up and Text Bottom//
+// Text up and Text Bottom //
 const textTop = document.getElementById("top-text-container");
 const textBottom = document.getElementById("bottom-text-container");
 const inputTextTop = document.getElementById("top-text")
@@ -50,7 +35,7 @@ inputTextBottom.addEventListener("input" , () => {
 })
 
 
-//Meme Image Container//
+// Meme Image Container //
 const inputUrl = document.getElementById("url-input");
 const imgContainer = document.getElementById("meme-img");
 
@@ -61,7 +46,7 @@ inputUrl.addEventListener( "input" , () => {
 // input background text color//
 
 const inputColor = document.getElementById("input-color")
-//let colors;
+let colors;
 
 inputColor.addEventListener("input" , () => {
     textTop.style.color = `${inputColor.value}`

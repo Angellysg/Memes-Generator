@@ -9,187 +9,283 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
-    
     <title>Memes Generator</title>
 </head>
 <body>
     <header>
-        <h1>Memes Generator</h1>
-
+        <!-- ----------#### HEADER ####---------- -->
+        <h1>
+            Memes Generator
+        </h1>
+        <!-- ----------#### BUTTONS NAV ####---------- -->
         <nav>
-
-        <button class="buttons" id="img-btn"><h2><i class="fa-regular fa-image"></i>Image</h2></button>
-    
-        <button class="buttons" id="text-btn"><h2><i class="fa-solid fa-a"></i>Text</h2></button>
-        
-        <button class="buttons" id="mode-btn"><h2><i class="fa-sharp fa-solid fa-lightbulb"></i>Dark mode</h2></button>
-        
+        <button class="buttons" id="img-btn">
+            <i class="fa-regular fa-image"></i>
+                Image  
+        </button>
+        <button class="buttons" id="text-btn">
+            <i class="fa-solid fa-a"></i>
+                Text
+        </button>
+        <button class="buttons" id="mode-btn">
+            <i class="fa-sharp fa-solid fa-lightbulb"></i>
+                Dark mode
+        </button>
         </nav>
-    
     </header>
-
+        <!-- ----------#### CONTAINER MEME MAIN ####---------- -->
     <main class="main-container" id="main-container">
         <div class="meme-container" id="meme-container">
         <div class="meme-img" id="meme-img">
-            <h4 class="text-container top-text" id="top-text-container">TOP TEXT</h4>
-            <h4 class="text-container bottom-text" id="bottom-text-container">BOTTOM TEXT</h4>
+            <h4 class="text-container top-text" id="top-text-container">
+                TOP TEXT
+            </h4>
+            <h4 class="text-container bottom-text" id="bottom-text-container">
+                BOTTOM TEXT
+            </h4>
         </div>
         </div>
     </main>
-
-    
-        <!-- ASIDE IMAGE -->
-
-    <aside class="aside-image" id="aside-img-container">
-
-        <h3>Image</h3>
-
-        <h5>URL</h5>
-        <input class="input-text" type="url" placeholder="url" id="url-input" >
-    
-        <h5>BACKGROUND</h5>
-
+        <!-- ----------#### ASIDE IMAGE ####---------- -->
+    <aside class="aside" id="aside-img-container">
+        <h3>
+            IMAGE
+        </h3>
+        <h5>
+            URL
+        </h5>
+        <label for="url-input">
+        <input class="input-text" type="url" placeholder="URL" id="url-input" >
+        </label>
+        <h5>
+            BACKGROUND
+        </h5>
         <div class="background-filters">
         <div class="container-color">
         <input type="color" class="input-color" id="color-picker" />
         <p id="color-name" ></p>
         </div>
-
-        <select name="select" value="None" id="" >
-            <option value="none">None</option>
-            <option value="clarify">Clarify</option>
-            <option value="darken">Darken</option>
-            <option value="difference">Difference</option>
-            <option value="brightness">Brightness</option>
-            <option value="multiply">Multiply</option>
+        <select  name="select" value="None" id="" >
+            <option value="none">
+                None
+            </option>
+            <option value="clarify">
+                Clarify
+            </option>
+            <option value="darken">
+                Darken
+            </option>
+            <option value="difference">
+                Difference
+            </option>
+            <option value="brightness">
+                Brightness
+            </option>
+            <option value="multiply">
+                Multiply
+            </option>
         </select>
         </div>
-
-        <h5>FILTERS</h5>
-
-        <label for="">BRIGHT</label>
+        <h5>
+            FILTERS
+        </h5>
+        <label class="label-filters-input-img" for="bright-input">
+            BRIGHT
         <input type="range" min="0" max="1" value="1" step="0.1" id="bright-input">
-
-        <label for="">OPACITY</label>
+        </label>
+        <label class="label-filters-input-img" for="opacity-input">
+            OPACITY
         <input type="range" min="0" max="1" value="1" step="0.1" id="opacity-input">
-
-        <label for="">CONTRAST</label>
+        </label>
+        <label class="label-filters-input-img" for="contrast-input">
+            CONTRAST
         <input type="range" min="100%" max="1000%" value="100%" step="1%" id="contrast-input">
-
-        <label for="">BLUR</label>
+        </label>
+        <label class="label-filters-input-img" for="blur-input">
+            BLUR
         <input type="range" min="0px" max="10px" value="0px" step="0.1px" id="blur-input">
-
-        <label for="">GRAYSCALE</label>
+        </label>
+        <label class="label-filters-input-img" for="grayscale-input">
+            GRAYSCALE
         <input type="range" min="0%" max="100%" value="0%" step="1%" id="grayscale-input">
-
-        <label for="">SEPIA</label>
+        </label>
+        <label class="label-filters-input-img" for="sepia-input">
+            SEPIA
         <input type="range" min="0%" max="100%" value="0%" step="1%" id="sepia-input">
-
-        <label for="">HUE</label>
+        </label>
+        <label class="label-filters-input-img" for="hue-input">
+            HUE
         <input type="range" min="0deg" max="359deg" value="0deg" step="1deg" id="hue-input">
-
-        <label for="">SATURATION</label>
+        </label>
+        <label class="label-filters-input-img" for="saturation-input">
+            SATURATION
         <input type="range" min="100%" max="1000%" value="100%" step="10%" id="saturation-input">
-
-        <label for="">NEGATIVE</label>
+        </label>
+        <label class="label-filters-input-img" for="negative-input">
+            NEGATIVE
         <input type="range" min="0" max="1" value="1" step="0.1" id="negative-input">
-
-        <button class="reset">Reset Filters</button>
-
+        </label>
+        <button class="reset">
+            Reset Filters
+        </button>
     </aside>
-
-    <!-- ASIDE TEXT -->
-
-    <aside class="aside-text hidden" id="aside-text-container">
-        <h3>Text</h3>
-
-        <h5>TOP</h5>
+        <!-- ----------#### ASIDE TEXT ####---------- -->
+    <aside class="aside hidden" id="aside-text-container">
+        <h3>
+            TEXT
+        </h3>
+        <h5>
+            TOP
+        </h5>
+        <label for="top-text">
         <input class="input-text" type="text" name="" id="top-text" placeholder="TOP TEXT">
-
-        <div class="conrainer-no-top-text">
-        <label class="no-top-text" for=""><p>no top text</p></label>
-        <input class="no-top-text" type="checkbox" name="" id="">
+        </label>
+        <div class="container-no-top-text">
+        <label class="no-top-text" for="no-top-text">
+            <p>
+            no top text
+            </p>
+        <input class="no-top-text" type="checkbox" name="" id="no-top-text">
+        </label>
         </div>
-
-        <h5>Bottom</h5>
+        <h5>
+            BOTTOM
+        </h5>
+        <label for="bottom-text">
         <input class="input-text" type="text" name="" id="bottom-text" placeholder="BOTTOM TEXT">
-
+        </label>
         <div class="container-no-bottom-text">
-            <label class="no-bottom-text" for=""><p>no bottom text</p></label>
-            <input class="no-bottom-text" type="checkbox" name="" id="">
+            <label class="no-bottom-text" for="no-bottom-text">
+                <p>
+                    no bottom text
+                </p>
+            <input class="no-bottom-text" type="checkbox" name="" id="no-bottom-text">
+            </label>
         </div>
-
-        <h5>FONT</h5>
-        <select name="select" value="Arial" id="" >
-            <option value="Arial">Arial</option>
-            <option value="Arial Black">Arial Black </option>
-            <option value="American Typewriter">American Typewriter</option>
-            <option value="Andale Mono">Andale Mono</option>
-            <option value="Comic Sans MS">Comic Sans MS</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Impact">Impact</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Times New Roman">Times New Roman</option>
+        <h5>
+            FONT
+        </h5>
+        <select class="font-select" name="select" value="Arial" id="" >
+            <option value="Arial">
+                Arial
+            </option>
+            <option value="Arial Black">
+                Arial Black 
+            </option>
+            <option value="American Typewriter">
+                American Typewriter
+            </option>
+            <option value="Andale Mono">
+                Andale Mono
+            </option>
+            <option value="Comic Sans MS">
+                Comic Sans MS
+            </option>
+            <option value="Helvetica">
+                Helvetica
+            </option>
+            <option value="Impact">
+                Impact
+            </option>
+            <option value="Verdana">
+                Verdana
+            </option>
+            <option value="Times New Roman">
+                Times New Roman
+            </option>
         </select>
-
         <div class="font-container">
-            <input class="number input-text" type="number" name="" id="">
-            
+            <label for="">
+            <input class="number input-text" type="number" value="40" name="" id="">
+            </label>
         <div class="container-bottom-aling">
-            <button class="bottom-aling input-text"><i class="fa-solid fa-align-left"></i></button>
-            <button class="bottom-aling input-text"><i class="fa-solid fa-align-center"></i></button>
-            <button class="bottom-aling input-text"><i class="fa-solid fa-align-right"></i></button>
+            <button class="bottom-aling input-text">
+                <i class="fa-solid fa-align-left"></i>
+            </button>
+            <button class="bottom-aling input-text">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+            <button class="bottom-aling input-text">
+                <i class="fa-solid fa-align-right"></i>
+            </button>
         </div>
         </div>
-
         <div class="color-background">
-
-            
             <div class="container-color-text">
                 <div class="title-color-text">
-                <h5>COLOR</h5>
+                <h5>
+                    COLOR
+                </h5>
                 </div>
+                <label for="input-color">
                 <input type="color" class="input-color " id="input-color" />
+                </label>
                 <p id="color-name" ></p>
                 </div>
-
-            
             <div class="container-background-text"> 
                 <div class="title-color-text">
-                <h5>BACKGROUND</h5>
+                <h5>
+                    BACKGROUND
+                </h5>
                 </div>
+                <label for="input-color-background">
                 <input type="color" class="input-color" id="input-color-background" />
+                </label>
                 <p id="color-name"></p>
             </div>
         </div>
-
-        <div class="conrainer-no-bottom-text">
-            <label class="no-bottom-text" for=""><p>Transparent background</p></label>
+        <div class="container-no-bottom-text">
+            <label class="no-bottom-text" for="">
+                <p>
+                    Transparent background
+                </p>
             <input class="no-bottom-text" type="checkbox" name="" id="">
+            </label>
         </div>
-
-        <h5>CONTOUR</h5>
-
+        <h5>
+            CONTOUR
+        </h5>
         <div class="container-button-contour">
-        <button class="button-contour">None</button>
-        <button class="button-contour">Dark</button>
-        <button class="button-contour">Light</button>
+        <button class="button-contour">
+            None
+        </button>
+        <button class="button-contour">
+            Dark
+        </button>
+        <button class="button-contour">
+            Light
+        </button>
         </div>
-
-        <h5>SPACING</h5>
-        <input class="spacing " type="number" name="" id="">
-
-        <h5>INTERLINEAR</h5>
-        <select name="select" value="1.2" id="" >
-            <option value="0.8">0.8</option>
-            <option value="1">1</option>
-            <option value="1.2">1.2</option>
-            <option value="1.5">1.5</option>
-            <option value="2">2</option>
-            <option value="2.5">2.5</option>
+        <h5>
+            SPACING
+        </h5>
+        <label for="">
+        <input class="spacing " type="number" value="35" name="" id="">
+        </label>
+        <h5>
+            INTERLINE
+        </h5>
+        <select class="font-select" name="select" value="1.2" id="" >
+            <option value="0.8">
+                0.8
+            </option>
+            <option value="1">
+                1
+            </option>
+            <option value="1.2">
+                1.2
+            </option>
+            <option value="1.5">
+                1.5
+            </option>
+            <option value="2">
+                2
+            </option>
+            <option value="2.5">
+                2.5
+            </option>
         </select>
     </aside>
-
 <script src="script.js"></script>
 </body>
 </html>
