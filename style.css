@@ -71,8 +71,16 @@ input:focus , select:focus{
     font-size: 15px;
 }
 
+span{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+
 
 /* MAIN CONTAINER */
+
 
 .main-container {
     display: flex;
@@ -80,12 +88,15 @@ input:focus , select:focus{
     background-color:grey;
 }
 
+
 .meme-container {
     height: 70vh;
     width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-top: 10px;
     
 }
 
@@ -93,8 +104,6 @@ input:focus , select:focus{
     width: 100%;
     display: flex;
     flex-grow: 1;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: black;
     background-size: cover;
     background-repeat: "no-repeat";
@@ -103,8 +112,11 @@ input:focus , select:focus{
 
 .top-text , .bottom-text{
     width: 100%;
-    height: 20%;
+    height: 15%;
     background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-container {
@@ -127,13 +139,14 @@ input:focus , select:focus{
     position: fixed;
     top: 0;
     right: 0;
+    color: white;
 }
 
 /* ASIDE IMAGE */
 
 h3{
     display: flex;
-    color: white;
+    
     justify-content: center;
     font-family: 'Belanosima', sans-serif;
     font-size: 20px;
@@ -143,7 +156,7 @@ h3{
 }
 
 h5{
-    color: white;
+    
     font-family: 'Ubuntu', sans-serif;
     font-size: 13px;
     margin: 8px 0px;
@@ -157,7 +170,7 @@ h5{
     font-family: 'Ubuntu', sans-serif;
     font-size: 12px;
     color: white;
-    margin: 5px;
+    margin-top: 5px;
 }
 
 
@@ -184,11 +197,13 @@ h5{
 }
 
 .container-color{
+    width: 100%;
     background-color:grey ;
     display: flex;
     align-items: center;
     border-radius: 5px ; 
     padding: 3px 5px;
+    margin-right: 10px;
 }
 
 select{
@@ -212,7 +227,6 @@ option {
 }
 
 .reset{
-    margin: 20px 0px;
     width: 50%;
     padding: 8px 0px;
     border-radius: 5px;
@@ -220,6 +234,7 @@ option {
     background-color: grey;
     border: none;
     cursor: pointer;
+    margin: 20px 0px;
 }
 
 .reset:hover{
@@ -294,8 +309,8 @@ option {
 }
 
 .container-color-text , .container-background-text{
-    width: 50%;
-    margin: 0px 6px;
+    width: 100%;
+    margin: 0px 5px;
 }
 
 .title-color-text{
@@ -331,4 +346,26 @@ option {
     background-color: grey;
     color: white;
     border: none;
+}
+
+/* MODE LIGTH */
+
+.main-container-light {
+    background-color: antiquewhite;
+    color: black;
+}
+
+.light-aside{
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.header-light{
+    background-color: antiquewhite;
+    color: black;
+}
+
+.light-body{
+    background-color: antiquewhite;
+    color: black;
 }

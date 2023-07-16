@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
     <title>Memes Generator</title>
 </head>
-<body>
-    <header>
+<body id="light-body">
+    <header id="header-container">
         <!-- ----------#### HEADER ####---------- -->
         <h1>
             Memes Generator
@@ -29,21 +29,20 @@
         </button>
         <button class="buttons" id="mode-btn">
             <i class="fa-sharp fa-solid fa-lightbulb"></i>
-                Dark mode
+                Light Mode
         </button>
         </nav>
     </header>
         <!-- ----------#### CONTAINER MEME MAIN ####---------- -->
     <main class="main-container" id="main-container">
         <div class="meme-container" id="meme-container">
-        <div class="meme-img" id="meme-img">
-            <h4 class="text-container top-text" id="top-text-container">
-                TOP TEXT
-            </h4>
-            <h4 class="text-container bottom-text" id="bottom-text-container">
-                BOTTOM TEXT
-            </h4>
-        </div>
+        <h4 class="text-container top-text" id="top-text-container">
+            TOP TEXT
+        </h4>
+        <div class="meme-img" id="meme-img"></div>
+        <h4 class="text-container bottom-text" id="bottom-text-container">
+            BOTTOM TEXT
+        </h4>
         </div>
     </main>
         <!-- ----------#### ASIDE IMAGE ####---------- -->
@@ -62,8 +61,10 @@
         </h5>
         <div class="background-filters">
         <div class="container-color">
-        <input type="color" class="input-color" id="color-picker" />
-        <p id="color-name" ></p>
+        <input type="color" class="input-color" id="color-picker-background-meme-img" />
+        <span id="color-name" >
+            #FFFFFF
+        </span>
         </div>
         <select  name="select" value="None" id="" >
             <option value="none">
@@ -217,10 +218,10 @@
                     COLOR
                 </h5>
                 </div>
-                <label for="input-color">
-                <input type="color" class="input-color " id="input-color" />
+                <label class="container-color" for="input-color">
+                <input type="color" class="input-color" id="input-color" />
+                <span id="color-name-text" >#000000</span>
                 </label>
-                <p id="color-name" ></p>
                 </div>
             <div class="container-background-text"> 
                 <div class="title-color-text">
@@ -228,10 +229,11 @@
                     BACKGROUND
                 </h5>
                 </div>
-                <label for="input-color-background">
+                <label class="container-color" for="input-color">
                 <input type="color" class="input-color" id="input-color-background" />
+                <span id="color-name-text-two" >#FFFFFF</span>
                 </label>
-                <p id="color-name"></p>
+                
             </div>
         </div>
         <div class="container-no-bottom-text">
