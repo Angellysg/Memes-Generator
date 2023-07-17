@@ -9,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600&family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
     <title>Memes Generator</title>
 </head>
 <body id="light-body">
@@ -18,7 +30,7 @@
             Memes Generator
         </h1>
         <!-- ----------#### BUTTONS NAV ####---------- -->
-        <nav>
+        <nav id="nav-light">
         <button class="buttons" id="img-btn">
             <i class="fa-regular fa-image"></i>
                 Image  
@@ -36,15 +48,28 @@
         <!-- ----------#### CONTAINER MEME MAIN ####---------- -->
     <main class="main-container" id="main-container">
         <div class="meme-container" id="meme-container">
-        <h4 class="text-container top-text" id="top-text-container">
+
+        <div class="text-container top-text" id="top-text-container">
+        <h4 >
             TOP TEXT
         </h4>
+        </div>
+
         <div class="meme-img" id="meme-img"></div>
-        <h4 class="text-container bottom-text" id="bottom-text-container">
+
+        <div class="text-container bottom-text" id="bottom-text-container">
+        <h4  >
             BOTTOM TEXT
         </h4>
         </div>
+        </div>
     </main>
+        <div class="container-button-download">
+        <button class="download-button" type="button" id="download-btn">
+        <i class="fa-solid fa-download"></i>
+            Meme Download
+        </button>
+
         <!-- ----------#### ASIDE IMAGE ####---------- -->
     <aside class="aside" id="aside-img-container">
         <h3>
@@ -60,17 +85,17 @@
             BACKGROUND
         </h5>
         <div class="background-filters">
-        <div class="container-color">
-        <input type="color" class="input-color" id="color-picker-background-meme-img" />
+        <div class="container-color" id="color-picker-background-container">
+        <input type="color" class="input-color" id="color-picker-background-meme-img" value="#FFFFFF" />
         <span id="color-name" >
             #FFFFFF
         </span>
         </div>
-        <select  name="select" value="None" id="" >
-            <option value="none">
+        <select  name="select" value="None" id="efects-image" >
+            <option value="unset">
                 None
             </option>
-            <option value="clarify">
+            <option value="lighten">
                 Clarify
             </option>
             <option value="darken">
@@ -79,7 +104,7 @@
             <option value="difference">
                 Difference
             </option>
-            <option value="brightness">
+            <option value="luminosity">
                 Brightness
             </option>
             <option value="multiply">
@@ -90,44 +115,44 @@
         <h5>
             FILTERS
         </h5>
-        <label class="label-filters-input-img" for="bright-input">
+        <label id="label-light-filters" class="label-filters-input-img" for="bright-input">
             BRIGHT
         <input type="range" min="0" max="1" value="1" step="0.1" id="bright-input">
         </label>
-        <label class="label-filters-input-img" for="opacity-input">
+        <label id="label-light-filters2" class="label-filters-input-img" for="opacity-input">
             OPACITY
         <input type="range" min="0" max="1" value="1" step="0.1" id="opacity-input">
         </label>
-        <label class="label-filters-input-img" for="contrast-input">
+        <label id="label-light-filters3" class="label-filters-input-img" for="contrast-input">
             CONTRAST
-        <input type="range" min="100%" max="1000%" value="100%" step="1%" id="contrast-input">
+        <input type="range" min="100" max="1000" value="100" step="1" id="contrast-input">
         </label>
-        <label class="label-filters-input-img" for="blur-input">
+        <label id="label-light-filters4" class="label-filters-input-img" for="blur-input">
             BLUR
-        <input type="range" min="0px" max="10px" value="0px" step="0.1px" id="blur-input">
+        <input type="range" min="0" max="10" value="0" step="0.1" id="blur-input">
         </label>
-        <label class="label-filters-input-img" for="grayscale-input">
+        <label id="label-light-filters5" class="label-filters-input-img" for="grayscale-input">
             GRAYSCALE
-        <input type="range" min="0%" max="100%" value="0%" step="1%" id="grayscale-input">
+        <input type="range" min="0" max="100" value="0" step="1" id="grayscale-input">
         </label>
-        <label class="label-filters-input-img" for="sepia-input">
+        <label id="label-light-filters6" class="label-filters-input-img" for="sepia-input">
             SEPIA
-        <input type="range" min="0%" max="100%" value="0%" step="1%" id="sepia-input">
+        <input type="range" min="0" max="100" value="0" step="1" id="sepia-input">
         </label>
-        <label class="label-filters-input-img" for="hue-input">
+        <label id="label-light-filters7" class="label-filters-input-img" for="hue-input">
             HUE
-        <input type="range" min="0deg" max="359deg" value="0deg" step="1deg" id="hue-input">
+        <input type="range" min="0" max="359" value="0" step="1" id="hue-input">
         </label>
-        <label class="label-filters-input-img" for="saturation-input">
+        <label id="label-light-filters8" class="label-filters-input-img" for="saturation-input">
             SATURATION
-        <input type="range" min="100%" max="1000%" value="100%" step="10%" id="saturation-input">
+        <input type="range" min="100" max="1000" value="100" step="10" id="saturation-input">
         </label>
-        <label class="label-filters-input-img" for="negative-input">
+        <label id="label-light-filters9" class="label-filters-input-img" for="negative-input">
             NEGATIVE
-        <input type="range" min="0" max="1" value="1" step="0.1" id="negative-input">
+        <input type="range" min="0" max="1" value="0" step="0.1" id="negative-input">
         </label>
-        <button class="reset">
-            Reset Filters
+        <button type="reset" class="reset" id="reset">
+            Filters Reset
         </button>
     </aside>
         <!-- ----------#### ASIDE TEXT ####---------- -->
@@ -143,8 +168,8 @@
         </label>
         <div class="container-no-top-text">
         <label class="no-top-text" for="no-top-text">
-            <p>
-            no top text
+            <p id="p-light-mode">
+            not top text
             </p>
         <input class="no-top-text" type="checkbox" name="" id="no-top-text">
         </label>
@@ -157,8 +182,8 @@
         </label>
         <div class="container-no-bottom-text">
             <label class="no-bottom-text" for="no-bottom-text">
-                <p>
-                    no bottom text
+                <p id="p-light-mode2">
+                    not bottom text
                 </p>
             <input class="no-bottom-text" type="checkbox" name="" id="no-bottom-text">
             </label>
@@ -166,17 +191,20 @@
         <h5>
             FONT
         </h5>
-        <select class="font-select" name="select" value="Arial" id="" >
+        <select class="font-select" name="select" value="Arial" id="font-select" >
+            <option selected disabled>
+                Select Font
+            </option>
             <option value="Arial">
                 Arial
             </option>
             <option value="Arial Black">
                 Arial Black 
             </option>
-            <option value="American Typewriter">
+            <option value="American">
                 American Typewriter
             </option>
-            <option value="Andale Mono">
+            <option value="Mono">
                 Andale Mono
             </option>
             <option value="Comic Sans MS">
@@ -196,17 +224,17 @@
             </option>
         </select>
         <div class="font-container">
-            <label for="">
-            <input class="number input-text" type="number" value="40" name="" id="">
+            <label for="size-fonts">
+            <input class="number input-text" type="number" value="40" name="" id="size-fonts">
             </label>
         <div class="container-bottom-aling">
-            <button class="bottom-aling input-text">
+            <button id="button-left" class="bottom-aling input-text">
                 <i class="fa-solid fa-align-left"></i>
             </button>
-            <button class="bottom-aling input-text">
+            <button id="button-center" class="bottom-aling input-text">
                 <i class="fa-solid fa-align-center"></i>
             </button>
-            <button class="bottom-aling input-text">
+            <button id="button-right" class="bottom-aling input-text">
                 <i class="fa-solid fa-align-right"></i>
             </button>
         </div>
@@ -214,23 +242,23 @@
         <div class="color-background">
             <div class="container-color-text">
                 <div class="title-color-text">
-                <h5>
+                <h5 id="title-color-text-light">
                     COLOR
                 </h5>
                 </div>
-                <label class="container-color" for="input-color">
-                <input type="color" class="input-color" id="input-color" />
+                <label id="label-light-color"  class="container-color" for="input-color">
+                <input type="color" class="input-color" id="input-color" value="#000000" />
                 <span id="color-name-text" >#000000</span>
                 </label>
                 </div>
             <div class="container-background-text"> 
                 <div class="title-color-text">
-                <h5>
+                <h5 id="title-color-text-light2">
                     BACKGROUND
                 </h5>
                 </div>
-                <label class="container-color" for="input-color">
-                <input type="color" class="input-color" id="input-color-background" />
+                <label id="label-light-color2" class="container-color" for="input-color">
+                <input type="color" class="input-color" id="input-color-background" value="#FFFFFF"/>
                 <span id="color-name-text-two" >#FFFFFF</span>
                 </label>
                 
@@ -238,7 +266,7 @@
         </div>
         <div class="container-no-bottom-text">
             <label class="no-bottom-text" for="">
-                <p>
+                <p id="p-light-mode3" >
                     Transparent background
                 </p>
             <input class="no-bottom-text" type="checkbox" name="" id="">
@@ -247,27 +275,25 @@
         <h5>
             CONTOUR
         </h5>
-        <div class="container-button-contour">
-        <button class="button-contour">
+        <div  class="container-button-contour">
+        <button id="button-none" class="button-contour">
             None
         </button>
-        <button class="button-contour">
+        <button id="button-dark" class="button-contour">
             Dark
         </button>
-        <button class="button-contour">
+        <button id="button-light" class="button-contour">
             Light
         </button>
         </div>
         <h5>
             SPACING
         </h5>
-        <label for="">
-        <input class="spacing " type="number" value="35" name="" id="">
-        </label>
+        <input type="number" id="input-spacing" class="spacing" aria-label="spacing" min="10" max="50" value="35">
         <h5>
             INTERLINE
         </h5>
-        <select class="font-select" name="select" value="1.2" id="" >
+        <select  class="font-select" name="select" value="1.2" id="input-interline" >
             <option value="0.8">
                 0.8
             </option>

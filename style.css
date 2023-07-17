@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: grey;
+    background-color: #3A506B;
 }
 
 header{
@@ -13,7 +13,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #0B132B;
     color: white;
 }
 
@@ -55,14 +55,14 @@ input:focus , select:focus{
     padding: 8px;
     margin-bottom: 5px;
     margin: 0px 8px;
-    background-color: black;
+    background-color: #0B132B;
     border: none;
     color: white;
 }
 
 .buttons:hover{
     cursor: pointer;
-    background-color: grey;
+    background-color: #c0d6df2d;
     border-radius: 4px;
 }
 
@@ -85,7 +85,7 @@ span{
 .main-container {
     display: flex;
     justify-content: center;
-    background-color:grey;
+    background-color: #3A506B;
 }
 
 
@@ -120,6 +120,7 @@ span{
 }
 
 .text-container {
+    width: 100%;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     background-color: white;
@@ -130,10 +131,32 @@ span{
 
 /* MAIN CONTAINER */
 
+.container-button-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.fa-download{
+    margin-right: 5px;
+}
+
+.download-button{
+    font-family: 'Belanosima', sans-serif;
+    font-size: 15px;
+    background-color: green;
+    padding: 15px 25px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
 .aside{
     width: 17%;
     height: 100%;
-    background-color: #2C3333;
+    background-color: #1C2541;
     padding: 30px 15px;
     overflow: auto;
     position: fixed;
@@ -198,7 +221,7 @@ h5{
 
 .container-color{
     width: 100%;
-    background-color:grey ;
+    background-color:#3A506B ;
     display: flex;
     align-items: center;
     border-radius: 5px ; 
@@ -208,7 +231,7 @@ h5{
 
 select{
     border: none;
-    background-color:  grey ;
+    background-color:  #3A506B ;
     color: white;
     display: flex;
     align-items: center;
@@ -216,14 +239,103 @@ select{
     padding: 7px;
 }
 
-input[type=range]{
-    accent-color: grey;
+input[type=range] {
+    background-color: #1C2541;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: #3A506B;
     border-radius: 5px;
 }
 
-option {
-    color: white;
-    background-color: grey;
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #FFFFFF;
+    height: 16px;
+    width: 16px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #3A506B;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: #3A506B;
+    border-radius: 5px;
+    border: 0px solid #000000;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #FFFFFF;
+    height: 16px;
+    width: 16px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #3A506B;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #3A506B;
+    border: 0px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px #000000;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #FFFFFF;
+    height: 16px;
+    width: 16px;
+    border-radius: 25px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #3A506B;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #3A506B;
 }
 
 .reset{
@@ -231,14 +343,14 @@ option {
     padding: 8px 0px;
     border-radius: 5px;
     color: white;
-    background-color: grey;
+    background-color: #3A506B;
     border: none;
     cursor: pointer;
     margin: 20px 0px;
 }
 
 .reset:hover{
-    background-color: rgb(149, 145, 145);
+    background-color: #c0d6df2d;
 }
 
 /* ASIDE TEXT */
@@ -265,7 +377,7 @@ option {
     width: 100%;
     padding: 5px;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #3A506B;
     color: white;
     border: none;
 }
@@ -298,7 +410,7 @@ option {
 
 .bottom-aling:hover{
     cursor: pointer;
-    background-color: #b9c0c0;
+    background-color: #c0d6df2d;
 }
 
 .color-background{
@@ -315,7 +427,6 @@ option {
 
 .title-color-text{
     color: white;
-    background-color: #2C3333;
 }
 
 .container-button-contour{
@@ -326,7 +437,7 @@ option {
 
 .button-contour{
     color: white;
-    background-color: gray;
+    background-color: #3A506B;
     padding: 8px 15px;
     margin-right: 5px;
     border-radius: 5px;
@@ -336,36 +447,45 @@ option {
 
 .button-contour:hover{
     cursor: pointer;
-    background-color: #b9c0c0;
+    background-color: #c0d6df2d;
 }
 
 .spacing{
     width: 100%;
     padding: 5px;
     border-radius: 5px;
-    background-color: grey;
+    background-color: #3A506B;
     color: white;
     border: none;
 }
 
 /* MODE LIGTH */
 
-.main-container-light {
-    background-color: antiquewhite;
+.light-body , .main-container-light{
+    background-color: #dbe9ee81;
+    color: black;
+}
+
+.header-light, .light-buttons {
+    background-color: #c0d6df96;
     color: black;
 }
 
 .light-aside{
-    background-color: blanchedalmond;
+    background-color: #b8d5f38d;
     color: black;
 }
 
-.header-light{
-    background-color: antiquewhite;
+.inputs-light{
+    background-color:  #4f6d7a3f ;
     color: black;
 }
 
-.light-body{
-    background-color: antiquewhite;
+.labes-filters{
     color: black;
+}
+
+.ranges-inputs-filters{
+    accent-color: #0B132B;
+    border-radius: 5px;
 }
