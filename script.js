@@ -158,6 +158,7 @@ const saturationInput = document.getElementById("saturation-input");
 const negativeInput = document.getElementById("negative-input");
 
 const filters = () => {
+    console.log(brightInput.value)
     imgContainer.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) hue-rotation(${hueInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturationInput.value}%) invert(${negativeInput.value})`;
 };
     brightInput.addEventListener("input", () => filters());
@@ -197,23 +198,49 @@ const noTextTop = document.getElementById("no-top-text");
 const noTextBottom = document.getElementById("no-bottom-text");
 
 const hideTopText = () => {
-    if (noTextTop.checked) {
-        textTop.classList.add("hidden");
-} else {
-    textTop.classList.remove("hidden");
-}
+    if (noTextTop.checked){
+        textTop.style.display = "none" ;
+    } else{
+        textTop.style.display = "flex" ;
+    }
 };
+
 
 const hideBottomText = () => {
-    if (noTextBottom.checked) {
-        textBottom.classList.add("hidden");
-} else {
-    textBottom.classList.remove("hidden");
-}
+    if (noTextBottom.checked){
+        textBottom.style.display = "none" ;
+    } else{
+        textBottom.style.display = "flex" ;
+    }
 };
 
-textTop.addEventListener("change", () => hideTopText());
-textBottom.addEventListener("change", () => hideBottomText());
+noTextTop.addEventListener("change", ()=>hideTopText());
+noTextBottom .addEventListener("change", ()=>hideBottomText());
+
+const checkboxSinFondo = document.getElementById('checkbox-sin-fondo');
+
+// ----####--> Transparent background CHECKBOX <--####---- //
+
+const transparentBackground = document.getElementById("transparent-background");
+
+transparentBackground.addEventListener("change", ()=>{
+    if (transparentBackground.checked){
+        textTop.style.backgroundColor = "transparent";
+        textBottom.style.backgroundColor = "transparent";
+        textTop.style.position = "absolute";
+        textBottom.style.position = "absolute";
+        textTop.style.top = "0";
+        textBottom.style.bottom = "0";
+
+    } else{
+        textTop.style.backgroundColor = `${inputColorBackgound.value}`;
+        textBottom.style.backgroundColor = `${inputColorBackgound.value}`;
+        textTop.style.position = "static";
+        textBottom.style.position = "static";
+
+    }
+});
+
 
 // ----####--> FONT SELECT <--####----  //
 const fontSelect = document.getElementById("font-select");
@@ -259,29 +286,76 @@ inputColorBackgound.addEventListener("input", () => nameColorTwo());
 
 // ----####--> BUTTONS SIZE/LEFT/CENTER/RIGHT FONTS <--####---- //
 const sizeFonts = document.getElementById("size-fonts");
+const topTextSize = document.getElementById("top-text-h4");
+const bottomTextSize = document.getElementById("bottom-text-h4");
+
+const fontSizeChange = () => {
+    textTop.style.fontSize = `${sizeFonts.value}px`;
+    textBottom.style.fontSize = `${sizeFonts.value}px`;
+};
+
+sizeFonts.addEventListener('input', ()=> fontSizeChange());
+
 const buttonDirectionFontsLeft = document.getElementById("button-left");
 const buttonDirectionFontsCenter = document.getElementById("button-center");
 const buttonDirectionFontsRight = document.getElementById("button-right");
+
+buttonDirectionFontsLeft.addEventListener('click', ()=>{
+    textTop.style.justifyContent = "left";
+    textBottom.style.justifyContent = "left" ;
+});
+
+buttonDirectionFontsCenter.addEventListener('click', ()=>{
+    textTop.style.justifyContent = "center";
+    textBottom.style.justifyContent = "center";
+});
+
+
+buttonDirectionFontsRight.addEventListener('click', ()=>{
+    textTop.style.justifyContent = "end";
+    textBottom.style.justifyContent = "end";
+});
+
 
 // ----####--> BUTTONS CONTOUR <--####---- //
 const buttonNone = document.getElementById("button-none");
 const buttonDark = document.getElementById("button-dark");
 const buttonLight = document.getElementById("button-light");
 
+buttonNone.addEventListener("click", () => {
+    textTop.style.webkitTextStroke = "transparent";
+    textBottom.style.webkitTextStroke = "transparent";
+});
+
+buttonLight.addEventListener("click", () => {
+    textTop.style.webkitTextStroke = "2px white";
+    textBottom.style.webkitTextStroke = "2px white";
+});
+
+buttonDark.addEventListener("click", () => {
+    textTop.style.webkitTextStroke = "2px black";
+    textBottom.style.webkitTextStroke = "2px black";
+});
+
 // ----####--> SPACING <--####---- //
 const spacing = document.getElementById("input-spacing");
+
+spacing.addEventListener("input", ()=>{
+    textTop.style.padding = `${spacing.value}px 0px`;
+    textBottom.style.padding = `${spacing.value}px 0px`;
+}); 
 
 // ----####--> INTERLINE <--####---- //
 const interline = document.getElementById("input-interline");
 
+interline.addEventListener("change" , () => {
+    console.log(interline.value)
+    textTop.style.lineHeight = `${interline.value}`;
+    textBottom.style.lineHeight = `${interline.value}`;
+});
 
 
 
-
-
-
-
-
-
+/* const resizeWindow = () => {// if(body.getBoundingClientRect().width > 1300) {// apartadoImagen.classList.toggle("oculto")// apartadoTexto.classList.toggle("oculto")// } else {// apartadoImagen.style.display = "none";// apartadoTexto.style.display = "none";// }// }// window.addEventListener("resize", resizeWindow)*/
 
 
