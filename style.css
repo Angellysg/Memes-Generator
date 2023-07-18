@@ -259,7 +259,7 @@ select{
 
 input[type=range] {
     background-color: #1C2541;
-    -webkit-appearance: none;
+    -webkit-appearanc: none;
     margin: 10px 0;
     width: 100%;
 }
@@ -504,7 +504,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .light-aside{
-    background-color: #b8d5f38d;
+    background-color: #c4dbee;
     color: black;
 }
 
@@ -527,9 +527,15 @@ input[type=range]:focus::-ms-fill-upper {
 @media screen and (max-width: 1300px){
     .meme-container{
         width: 55% ;
+        margin: 0px;
     }
     .aside{
         width: 22%;
+    }
+
+    .container-button-download{
+        margin-top: 5px;
+        margin-bottom: 0px;
     }
 
     .background-filters{
@@ -585,10 +591,9 @@ input[type=range]:focus::-ms-fill-upper {
 
 @media screen and (max-width: 690px){
     .meme-container{
-        width: 70% ;
+        width: 85% ;
     }
     .aside{
         width: 60%;
     }
-
 }

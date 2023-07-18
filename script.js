@@ -354,7 +354,6 @@ interline.addEventListener("change" , () => {
     textBottom.style.lineHeight = `${interline.value}`;
 });
 
-
 // ----####--> RESPONSIVE <--####---- //
 
 const buttonClose = document.getElementById("button-close");
@@ -371,19 +370,16 @@ buttonCloseText.addEventListener("click" , () => closeAside());
 const resizeWindow = () => {
     if(document.body.getBoundingClientRect().width > 1300) {
 //si al condicion se cumple se ejecuta esta seccion de codigo
-        textAside.classList.remove("hidden");
-        imgAside.classList.remove("hidden");
+        textAside.classList.toggle("hidden");
+        imgAside.classList.toggle("hidden");
         buttonClose.classList.add("hidden");
         buttonCloseText.classList.add("hidden");
         } else {
-            buttonClose.classList.remove("hidden");
-            buttonCloseText.classList.remove("hidden");
-            textAside.classList.add("hidden");
-            imgAside.classList.add("hidden");
+        buttonClose.classList.remove("hidden");
+        buttonCloseText.classList.remove("hidden");
         }
 }
-window.addEventListener("resize", resizeWindow)
-
+window.addEventListener("resize", resizeWindow);
 
 
 
