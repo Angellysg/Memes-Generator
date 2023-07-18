@@ -355,7 +355,36 @@ interline.addEventListener("change" , () => {
 });
 
 
+// ----####--> RESPONSIVE <--####---- //
 
-/* const resizeWindow = () => {// if(body.getBoundingClientRect().width > 1300) {// apartadoImagen.classList.toggle("oculto")// apartadoTexto.classList.toggle("oculto")// } else {// apartadoImagen.style.display = "none";// apartadoTexto.style.display = "none";// }// }// window.addEventListener("resize", resizeWindow)*/
+const buttonClose = document.getElementById("button-close");
+const buttonCloseText = document.getElementById("button-close-text");
+
+const closeAside = () => {
+    imgAside.classList.add("hidden");
+    textAside.classList.add("hidden");
+}
+
+buttonClose.addEventListener("click" , () => closeAside());
+buttonCloseText.addEventListener("click" , () => closeAside());
+
+const resizeWindow = () => {
+    if(document.body.getBoundingClientRect().width > 1300) {
+//si al condicion se cumple se ejecuta esta seccion de codigo
+        textAside.classList.remove("hidden");
+        imgAside.classList.remove("hidden");
+        buttonClose.classList.add("hidden");
+        buttonCloseText.classList.add("hidden");
+        } else {
+            buttonClose.classList.remove("hidden");
+            buttonCloseText.classList.remove("hidden");
+            textAside.classList.add("hidden");
+            imgAside.classList.add("hidden");
+        }
+}
+window.addEventListener("resize", resizeWindow)
+
+
+
 
 

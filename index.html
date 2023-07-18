@@ -16,6 +16,9 @@
     referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="description" content="Memes Generator">
+    <meta name="keywords"
+        content="Memes Generator, editor de memes, developer, javascript">
     <title>Memes Generator</title>
 </head>
 <body id="light-body">
@@ -25,12 +28,12 @@
             Memes Generator
         </h1>
         <!-- ----------#### BUTTONS NAV ####---------- -->
-        <nav id="nav-light">
-        <button class="buttons" id="img-btn">
+        <nav  id="nav-light">
+        <button type="button" class="buttons" id="img-btn">
             <i class="fa-regular fa-image"></i>
                 Image  
         </button>
-        <button class="buttons" id="text-btn">
+        <button type="button" class="buttons" id="text-btn">
             <i class="fa-solid fa-a"></i>
                 Text
         </button>
@@ -63,6 +66,9 @@
         </button>
         <!-- ----------#### ASIDE IMAGE ####---------- -->
     <aside class="aside" id="aside-img-container">
+        <button type="button" class="button-close hidden" id="button-close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
         <h3>
             IMAGE
         </h3>
@@ -82,7 +88,7 @@
             #FFFFFF
         </span>
         </div>
-        <select  name="select" value="None" id="efects-image">
+        <select class="select-filters"  name="select" value="None" id="efects-image">
             <option value="unset">
                 None
             </option>
@@ -148,6 +154,9 @@
     </aside>
         <!-- ----------#### ASIDE TEXT ####---------- -->
     <aside class="aside hidden" id="aside-text-container">
+            <button type="button"  class="button-close hidden"  id="button-close-text">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         <h3>
             TEXT
         </h3>
