@@ -24,7 +24,6 @@ h1{
     padding: 15px 0px;
 }
 
-
 nav{
     display: flex ;
     align-items: center;
@@ -39,14 +38,18 @@ input::placeholder {
     color: white; 
 }
 
-input:focus , select:focus{
-    outline: silver;
+input:focus , .download-button:focus , .reset:focus , .bottom-aling:focus , .button-contour:focus {
+    outline:  none;
+    background-color: #c0d6df2d;
+}
+
+select:focus{
+    outline: none;
 }
 
 .hidden{
     display: none;
 }
-
 
 .buttons{
     display: flex;
@@ -67,6 +70,13 @@ input:focus , select:focus{
     border-radius: 4px;
 }
 
+.buttons:focus{
+    background-color: #c0d6df2d;
+    border-radius: 4px;
+    outline: none;
+
+}
+
 .fa-image, .fa-a , .fa-lightbulb {
     margin: 0px 5px;
     font-size: 15px;
@@ -75,20 +85,16 @@ input:focus , select:focus{
 span{
     font-family: 'Ubuntu', sans-serif;
     font-size: 15px;
-    margin-left: 5px;
+    margin-right: 10px;
 }
 
-
-
 /* MAIN CONTAINER */
-
 
 .main-container {
     display: flex;
     justify-content: center;
     background-color: #3A506B;
 }
-
 
 .meme-container {
     position: relative;
@@ -100,7 +106,6 @@ span{
     align-items: center;
     margin-top: 10px;
     color: black;
-    
 }
 
 .meme-img {
@@ -173,7 +178,6 @@ span{
 
 h3{
     display: flex;
-    
     justify-content: center;
     font-family: 'Belanosima', sans-serif;
     font-size: 20px;
@@ -187,7 +191,6 @@ h5{
     font-family: 'Ubuntu', sans-serif;
     font-size: 13px;
     margin: 8px 0px;
-
 }
 
 .label-filters-input-img{
@@ -199,7 +202,6 @@ h5{
     color: white;
     margin-top: 5px;
 }
-
 
 .input-color {
     width: 20px;
@@ -218,22 +220,23 @@ h5{
 
 .background-filters{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    color: white;
+    
 }
 
 .container-color{
-    width: 100%;
+    width: 60%;
     background-color:#3A506B ;
     display: flex;
     align-items: center;
     border-radius: 5px ; 
     padding: 3px 5px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 select{
+    width: 60%;
     border: none;
     background-color:  #3A506B ;
     color: white;
@@ -251,7 +254,8 @@ input[type=range] {
 }
 
 input[type=range]:focus {
-    outline: none;
+    outline:  none;
+    background-color: #c0d6df2d;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -303,7 +307,6 @@ input[type=range]::-ms-track {
     width: 100%;
     height: 6px;
     cursor: pointer;
-    animate: 0.2s;
     background: transparent;
     border-color: transparent;
     color: transparent;
@@ -389,6 +392,7 @@ input[type=range]:focus::-ms-fill-upper {
 .font-select{
     width: 100%;
     padding: 6px;
+    background-color: #3A506B;
 }
 
 .font-container{
@@ -420,13 +424,26 @@ input[type=range]:focus::-ms-fill-upper {
 .color-background{
     display: flex;
     justify-content: space-around;
-    margin: 0px ;
     width: 100%;
 }
 
 .container-color-text , .container-background-text{
-    width: 100%;
-    margin: 0px 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.input-color-texts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color:#3A506B;
+    align-items: center;
+    border-radius: 5px ; 
+    padding: 3px 2px;
+    margin-right: 5px;
 }
 
 .title-color-text{

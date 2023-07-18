@@ -159,7 +159,7 @@ const negativeInput = document.getElementById("negative-input");
 
 const filters = () => {
     console.log(brightInput.value)
-    imgContainer.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) hue-rotation(${hueInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturationInput.value}%) invert(${negativeInput.value})`;
+    imgContainer.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) hue-rotate(${hueInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturationInput.value}%) invert(${negativeInput.value})`;
 };
     brightInput.addEventListener("input", () => filters());
     opacityInput.addEventListener("input", () => filters());

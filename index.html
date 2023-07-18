@@ -13,14 +13,9 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
     integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
     crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    ></script>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    ></script>
+    referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Memes Generator</title>
 </head>
 <body id="light-body">
@@ -48,17 +43,14 @@
         <!-- ----------#### CONTAINER MEME MAIN ####----------  -->
     <main class="main-container" id="main-container">
         <div class="meme-container" id="meme-container">
-
-            <div class="text-container top-text"    id="top-text-container">
+            <div class="text-container top-text" id="top-text-container">
                 <h4 id="top-text-h4">
                     TOP TEXT
                 </h4>
             </div>
-
             <div class="meme-img" id="meme-img"></div>
-
         <div class="text-container bottom-text" id="bottom-text-container">
-        <h4 id="bottom-text-h4" >
+        <h4 id="bottom-text-h4">
             BOTTOM TEXT
                 </h4>
             </div>
@@ -69,7 +61,6 @@
         <i class="fa-solid fa-download"></i>
             Meme Download
         </button>
-
         <!-- ----------#### ASIDE IMAGE ####---------- -->
     <aside class="aside" id="aside-img-container">
         <h3>
@@ -79,19 +70,19 @@
             URL
         </h5>
         <label for="url-input">
-        <input class="input-text" type="url" placeholder="URL" id="url-input" >
+        <input class="input-text" type="url" placeholder="URL" id="url-input">
         </label>
         <h5>
             BACKGROUND
         </h5>
         <div class="background-filters">
         <div class="container-color" id="color-picker-background-container">
-        <input type="color" class="input-color" id="color-picker-background-meme-img" value="#FFFFFF" />
-        <span id="color-name" >
+        <input type="color" class="input-color" id="color-picker-background-meme-img" value="#FFFFFF"/>
+        <span id="color-name">
             #FFFFFF
         </span>
         </div>
-        <select  name="select" value="None" id="efects-image" >
+        <select  name="select" value="None" id="efects-image">
             <option value="unset">
                 None
             </option>
@@ -191,7 +182,7 @@
         <h5>
             FONT
         </h5>
-        <select class="font-select" name="select" value="Arial" id="font-select" >
+        <select class="font-select" name="select" value="Arial" id="font-select">
             <option selected disabled>
                 Select Font
             </option>
@@ -246,9 +237,9 @@
                     COLOR
                 </h5>
                 </div>
-                <label id="label-light-color"  class="container-color" for="input-color">
-                <input type="color" class="input-color" id="input-color" value="#000000" />
-                <span id="color-name-text" >#000000</span>
+                <label id="label-light-color"  class="input-color-texts" for="input-color">
+                <input type="color" class="input-color" id="input-color" value="#000000"/>
+                <span id="color-name-text">#000000</span>
                 </label>
                 </div>
             <div class="container-background-text"> 
@@ -257,16 +248,15 @@
                     BACKGROUND
                 </h5>
                 </div>
-                <label id="label-light-color2" class="container-color" for="input-color">
+                <label id="label-light-color2" class="input-color-texts" for="input-color">
                 <input type="color" class="input-color" id="input-color-background" value="#FFFFFF"/>
-                <span id="color-name-text-two" >#FFFFFF</span>
+                <span id="color-name-text-two">#FFFFFF</span>
                 </label>
-                
             </div>
         </div>
         <div class="container-no-bottom-text">
             <label class="no-bottom-text" for="transparent-background">
-                <p id="p-light-mode3" >
+                <p id="p-light-mode3">
                     Transparent background
                 </p>
             <input class="no-bottom-text" type="checkbox" name="" id="transparent-background">
@@ -293,7 +283,7 @@
         <h5>
             INTERLINE
         </h5>
-        <select  class="font-select" name="select" value="1.2" id="input-interline" >
+        <select  class="font-select" name="select" value="1.2" id="input-interline">
             <option value="0.8">
                 0.8
             </option>
